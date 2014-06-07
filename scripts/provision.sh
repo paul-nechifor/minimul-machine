@@ -1,10 +1,11 @@
 #!/bin/bash
 
 packages=(
-  php5-common
-  php5-cli
-  php5-fpm
   nginx
+  php5-cgi
+  php5-cli
+  php5-common
+  php5-fpm
 )
 
 main() {
