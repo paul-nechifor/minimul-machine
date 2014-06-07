@@ -32,7 +32,7 @@ def install_nginx_config(id):
 
     os.system("""
         cd /etc/nginx/sites-enabled
-        rm {id}.minimul.ro
+        rm {id}.minimul.ro 2>/dev/null
         ln -s ../sites-available/{id}.minimul.ro {id}.minimul.ro
     """.format(**vals))
 
@@ -48,11 +48,17 @@ def main():
         'paulscripts',
         'collegesite',
         'collegesite2',
+        'italiafascista',
+        'rstsd',
+        'meetfirefox',
+        'timr',
     ]
 
     for site in sites:
         install_nginx_config(site)
         copy_site(site)
+
+    os.system('service nginx restart')
 
 if __name__ == '__main__':
     main()
