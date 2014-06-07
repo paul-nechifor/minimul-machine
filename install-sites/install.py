@@ -7,7 +7,7 @@ def install_nginx_config(id):
     server {{
         server_name {id}.minimul.ro;
         root /opt/minimul-sites/{id};
-        index index.html;
+        index index.html index.php;
 
         location / {{
         }}
