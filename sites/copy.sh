@@ -4,6 +4,7 @@ here=`dirname "$0"`
 pro=/home/p/pro
 
 sites=(
+  minimul-default default
   paul-scripts paulscripts
   college-website collegesite
   college-website-2 collegesite2

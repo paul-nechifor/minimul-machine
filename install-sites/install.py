@@ -3,9 +3,15 @@
 import os
 
 def install_nginx_config(id):
+    vals = {
+        'id': id,
+        'site': 'minimul.ro' if id == 'default' else id + '.minimul.ro',
+        'path_name': 'default' if id == 'default' else id + '.minimul.ro',
+    }
+
     file = """
     server {{
-        server_name {id}.minimul.ro;
+        server_name {site};
         root /opt/minimul-sites/{id};
         index index.html index.php;
 
@@ -20,20 +26,16 @@ def install_nginx_config(id):
     }}
     """
 
-    vals = {
-        'id': id
-    }
-
     file = file.format(**vals)
 
-    f = open('/etc/nginx/sites-available/{id}.minimul.ro'.format(**vals), 'w')
+    f = open('/etc/nginx/sites-available/{path_name}'.format(**vals), 'w')
     f.write(file)
     f.close()
 
     os.system("""
         cd /etc/nginx/sites-enabled
-        rm {id}.minimul.ro 2>/dev/null
-        ln -s ../sites-available/{id}.minimul.ro {id}.minimul.ro
+        rm {path_name} 2>/dev/null
+        ln -s ../sites-available/{path_name} {path_name}
     """.format(**vals))
 
 def copy_site(id):
@@ -45,6 +47,7 @@ def copy_site(id):
 
 def main():
     sites = [
+        'default',
         'paulscripts',
         'collegesite',
         'collegesite2',
