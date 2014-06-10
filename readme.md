@@ -11,11 +11,11 @@ Bring up the machine.
 Copy the projects into `sites/`. This step will need to be fixed since projects
 are hardcoded to `/home/p/pro`.
 
-    sites/copy.sh
+    scripts/copy-sites.sh
 
 From inside the machine:
 
-    sudo /vagrant/install-sites/install.py
+    sudo /vagrant/script/install-sites.py
 
 The default site is at [10.10.10.10](http://10.10.10.10). The rest need the
 appropriate hosts file rules.

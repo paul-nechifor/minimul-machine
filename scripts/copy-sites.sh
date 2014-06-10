@@ -1,6 +1,6 @@
 #!/bin/bash
 
-here=`dirname "$0"`
+sites_dir=`dirname "$0"`/../sites
 pro=/home/p/pro
 
 sites=(
@@ -22,6 +22,8 @@ excludes=(
   --exclude readme.md
 )
 
+mkdir -p $sites_dir 2>/dev/null
+
 for (( i = 0; i < ${#sites[@]}; i+=2 )) {
-  rsync -a --del ${excludes[@]} "$pro/${sites[$i]}/" "$here/${sites[$i+1]}/"
+  rsync -a --del ${excludes[@]} "$pro/${sites[$i]}/" "$sites_dir/${sites[$i+1]}/"
 }
