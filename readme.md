@@ -22,6 +22,9 @@ appropriate hosts file rules.
 
 ## Deploying
 
+The DigitalOcean keys must be on a line in `private/api_key` and
+`private/client_id`. After that:
+
     vagrant plugin install vagrant-digitalocean
     vagrant up --provider=digital_ocean
 
