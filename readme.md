@@ -13,9 +13,13 @@ are hardcoded to `/home/p/pro`.
 
     scripts/copy-sites.sh
 
+Go in the machine:
+
+    vagrant ssh
+
 From inside the machine:
 
-    sudo /vagrant/script/install-sites.py
+    sudo /vagrant/scripts/install-sites.py
 
 The default site is at [10.10.10.10](http://10.10.10.10). The rest need the
 appropriate hosts file rules.
