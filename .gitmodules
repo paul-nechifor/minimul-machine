@@ -1,0 +1,24 @@
+[submodule "sites/timr"]
+	path = sites/timr
+	url = https://github.com/paul-nechifor/timr.git
+[submodule "sites/default"]
+	path = sites/default
+	url = https://github.com/paul-nechifor/minimul.git
+[submodule "sites/paulscripts"]
+	path = sites/paulscripts
+	url = https://github.com/paul-nechifor/paul-scripts.git
+[submodule "sites/collegesite"]
+	path = sites/collegesite
+	url = https://github.com/paul-nechifor/college-website.git
+[submodule "sites/collegesite2"]
+	path = sites/collegesite2
+	url = https://github.com/paul-nechifor/college-website-2.git
+[submodule "sites/italiafascista"]
+	path = sites/italiafascista
+	url = https://github.com/paul-nechifor/italia-fascista.git
+[submodule "sites/rstsd"]
+	path = sites/rstsd
+	url = https://github.com/paul-nechifor/rstsd.git
+[submodule "sites/meetfirefox"]
+	path = sites/meetfirefox
+	url = https://github.com/paul-nechifor/meet-firefox
