@@ -13,7 +13,7 @@ Get the submodules:
 
 Bring up the machine.
 
-    vagrant up
+    vagrant up minimul-local
 
 Go in the machine:
 
@@ -33,7 +33,7 @@ The DigitalOcean keys must be on a line in `private/api_key` and
 `private/client_id`. After that:
 
     vagrant plugin install vagrant-digitalocean
-    vagrant up --provider=digital_ocean
+    vagrant up minimul-remote --provider=digital_ocean
 
 ## License
 
