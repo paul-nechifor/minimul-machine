@@ -6,7 +6,6 @@ def install_nginx_config(id):
     vals = {
         'id': id,
         'site': 'minimul.ro' if id == 'default' else id + '.minimul.ro',
-        'path_name': 'default' if id == 'default' else id + '.minimul.ro',
     }
 
     file = """
@@ -28,14 +27,14 @@ def install_nginx_config(id):
 
     file = file.format(**vals)
 
-    f = open('/etc/nginx/sites-available/{path_name}'.format(**vals), 'w')
+    f = open('/etc/nginx/sites-available/{site}'.format(**vals), 'w')
     f.write(file)
     f.close()
 
     os.system("""
         cd /etc/nginx/sites-enabled
-        rm {path_name} 2>/dev/null
-        ln -s ../sites-available/{path_name} {path_name}
+        rm {site} 2>/dev/null
+        ln -s ../sites-available/{site} {site}
     """.format(**vals))
 
 def copy_site(id):
