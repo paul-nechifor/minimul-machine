@@ -2,27 +2,30 @@
 
 A Vagrant configuration for storing all my old websites. It's not complete.
 
+![cover image](screenshot.png)
+
 ## Running it
+
+Get the submodules:
+
+    git submodule init
+    git submodule update
 
 Bring up the machine.
 
     vagrant up
 
-Copy the projects into `sites/`. This step will need to be fixed since projects
-are hardcoded to `/home/p/pro`.
-
-    scripts/copy-sites.sh
-
 Go in the machine:
 
     vagrant ssh
 
-From inside the machine:
+From inside the machine, install the sites:
 
     sudo /vagrant/scripts/install-sites.py
 
-The default site is at [10.10.10.10](http://10.10.10.10). The rest need the
-appropriate hosts file rules.
+Add this to your `/etc/hosts` file in order to access all domains:
+
+    10.10.10.10 minimul.ro paulscripts.minimul.ro collegesite.minimul.ro collegesite2.minimul.ro italiafascista.minimul.ro rstsd.minimul.ro meetfirefox.minimul.ro timr.minimul.ro
 
 ## Deploying
 
