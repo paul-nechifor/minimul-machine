@@ -1,3 +1,7 @@
+# This repository has been moved to [gitlab.com/paul-nechifor/minimul-machine](http://gitlab.com/paul-nechifor/minimul-machine).
+
+Old readme:
+
 # Minimul
 
 A Vagrant configuration for storing all my old websites. It's not complete.
